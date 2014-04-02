@@ -90,8 +90,6 @@ bool INA219::calibrate(float rShuntValue, float iMaxExpected)
     currentLSB = ceil(currentLSB);
     currentLSB *= 0.0001;
 
-    Serial.println(currentLSB,5);
-
     powerLSB = currentLSB * 20;
 
     calibrationValue = (uint16_t)((0.04096) / (currentLSB * rShunt));
