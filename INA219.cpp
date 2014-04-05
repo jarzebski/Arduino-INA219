@@ -77,12 +77,11 @@ bool INA219::calibrate(float rShuntValue, float iMaxExpected)
     uint16_t calibrationValue;
     rShunt = rShuntValue;
 
-    float iMaxPossible, minimumLSB, maximumLSB;
+    float iMaxPossible, minimumLSB;
 
     iMaxPossible = vShuntMax / rShunt;
 
     minimumLSB = iMaxExpected / 32767;
-    maximumLSB = iMaxExpected / 4096;
 
     currentLSB = (uint16_t)(minimumLSB * 100000000);
     currentLSB /= 100000000;
