@@ -156,7 +156,7 @@ float INA219::readShuntVoltage(void)
 
 float INA219::readBusVoltage(void)
 {
-    int16_t voltage;
+    uint16_t voltage;
 
     voltage = readRegister16(INA219_REG_BUSVOLTAGE);
     voltage >>= 3;
@@ -232,7 +232,6 @@ int16_t INA219::readRegister16(uint8_t reg)
 
     delay(1);
 
-    Wire.beginTransmission(inaAddress);
     Wire.requestFrom(inaAddress, 2);
     while(!Wire.available()) {};
     #if ARDUINO >= 100
@@ -242,8 +241,7 @@ int16_t INA219::readRegister16(uint8_t reg)
         uint8_t vha = Wire.receive();
         uint8_t vla = Wire.receive();
     #endif;
-    Wire.endTransmission();
-
+    
     value = vha << 8 | vla;
 
     return value;
