@@ -233,14 +233,14 @@ int16_t INA219::readRegister16(uint8_t reg)
     delay(1);
 
     Wire.requestFrom(inaAddress, 2);
-    while(!Wire.available()) {};
+
     #if ARDUINO >= 100
         uint8_t vha = Wire.read();
         uint8_t vla = Wire.read();
     #else
         uint8_t vha = Wire.receive();
         uint8_t vla = Wire.receive();
-    #endif;
+    #endif
     
     value = vha << 8 | vla;
 
