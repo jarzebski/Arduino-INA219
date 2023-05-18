@@ -3,7 +3,9 @@ INA219 Arduino Library 1.1.0 / 18.05.2023
 
  * Corrected bus voltage to read out an unsigned value
  * Remove beginTransmission and endTransmission in readRegister
+ * Add PlatformIO and Arduino library informations
  * Change to MIT license
+ * General cleanups
  
 INA219 Arduino Library 1.0.0 / 02.04.2014
 ======================================================================
