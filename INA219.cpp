@@ -1,8 +1,8 @@
 /*
 INA219.cpp - Class file for the INA219 Zero-Drift, Bi-directional Current/Power Monitor Arduino Library.
 
-Version: 1.0.0
-(c) 2014 Korneliusz Jarzebski
+Version: 1.0.1
+(c) 2014-2023 Korneliusz Jarzebski
 www.jarzebski.pl
 
 This program is free software: you can redistribute it and/or modify
